@@ -1,0 +1,32 @@
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 62.5%;
+  font-family: $font-main;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 1.4rem /* 16px */;
+  line-height: 1.5;
+
+}
+
+/* APP - ASIDE - HEADER */
+.container-app {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  min-width: 300px;
+  @include responsive (desktop){
+    flex-direction: row;
+  }
+}
+
