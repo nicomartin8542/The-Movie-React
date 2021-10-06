@@ -20,3 +20,12 @@
   }
 }
 
+@mixin d-flex ($direction){
+  display: flex;
+  flex-wrap: nowrap;
+  @if $direction==col{
+    flex-direction: column;
+  }
+}
+
+

@@ -6,6 +6,7 @@ function App() {
   return (
     <Layout>
       <Principal />
+      <h1>HOla mundo</h1>
     </Layout>
   );
 }

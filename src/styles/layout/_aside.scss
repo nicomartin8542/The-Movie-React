@@ -1,6 +1,6 @@
 aside {
-  background-color: rgb(209, 206, 206);
+  border-right: 1px solid rgba(107, 107, 107, 0.15);
   @include responsive (desktop){
-    flex: 0 0 500px;
+    flex: 0 0 300px;
   }
 }

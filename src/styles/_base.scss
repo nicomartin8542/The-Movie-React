@@ -8,6 +8,7 @@ html {
   height: 100%;
   font-size: 62.5%;
   font-family: $font-main;
+  color:$color-white;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
   margin: 0;
   font-size: 1.4rem /* 16px */;
   line-height: 1.5;
-
+  background-color: $color-primary;
 }
 
 /* APP - ASIDE - HEADER */

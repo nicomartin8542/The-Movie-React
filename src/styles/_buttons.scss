@@ -1,0 +1,31 @@
+%button{
+  display: block;
+  padding: 10px;
+  width: 150px;
+  font-size: 1.7rem;
+  font-weight: bold;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: .8px;
+  border-radius: 8px;
+  transition: background-color .3s ease;
+  cursor: pointer;
+}
+
+.btn{
+  @extend %button;
+  &-primary{
+    background-color: $color-blue-light;
+    &:hover{
+      background-color: lighten($color: $color-blue-light, $amount: 2);
+    }
+  }
+}
+.block{
+  @extend %button;
+  width: 100%;
+}
+
+
+
+
