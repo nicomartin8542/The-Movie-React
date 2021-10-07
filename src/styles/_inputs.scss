@@ -1,0 +1,13 @@
+.search{
+  display: block;
+  padding: .5rem 1.5rem;
+  width: 250px;
+  line-height: calc(2rem - 2px);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+
+  @include responsive (desktop){
+    margin: 0 1.5rem;
+  }
+}

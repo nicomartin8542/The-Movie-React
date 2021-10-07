@@ -1,4 +1,5 @@
 import React from "react";
+import SideBar from "./SideBar";
 
 const Header = () => {
   return (
@@ -7,6 +8,7 @@ const Header = () => {
       <div className="header__logo">
         <h1>ReactMovie <i className="fa fa-film " aria-hidden="true"></i></h1>
       </div>
+      <SideBar/>
       <button
         className="btn-menu"
       >
