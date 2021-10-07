@@ -1,12 +1,15 @@
 /* Agregar los archivos parciales */
 
-@import './globals';
-@import './mixins';
-@import './base';
+@import "./globals";
+@import "./mixins";
+@import "./base";
 
 /* Layout */
-@import './layout/header';
-@import './layout/aside';
+@import "./layout/header";
+@import "./layout/aside";
 
-@import './buttons';
-@import './inputs';
+/* AUTH */
+@import "./auth/login";
+
+@import "./buttons";
+@import "./inputs";

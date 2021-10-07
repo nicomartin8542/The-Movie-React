@@ -1,0 +1,56 @@
+.container {
+  max-width: 90%;
+  width: 600px;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.container__form {
+  padding: 0 2rem 2rem 2rem;
+  background-color: $color-white;
+  border: 1px solid;
+
+  & h2 {
+    color: $color-black;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  & a {
+    text-decoration: none;
+    color: $color-black;
+    font-size: 1.8rem;
+  }
+}
+
+form {
+  font-family: $font-main;
+
+  & input {
+    padding: 1rem 1.5rem;
+    border-radius: 0.3rem;
+    border: 0.1rem solid $color-grey;
+    transition: 0.3s ease all;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  & input:focus {
+    border: 0.1rem solid $color-blue-light;
+    outline: none;
+  }
+
+  & button {
+    background-color: $color-blue-light;
+    border: none;
+    width: 100%;
+    cursor: pointer;
+    color: $color-white;
+    display: inline-block;
+    padding: 1rem 1.5rem;
+    border-radius: 0.3rem;
+    text-align: center;
+    line-height: 2.2rem;
+    transition: 0.3s ease all;
+  }
+}

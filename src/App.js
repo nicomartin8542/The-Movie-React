@@ -1,13 +1,18 @@
 import React from "react";
-import Layout from "./components/layouts/Layout";
-import Principal from "./components/layouts/Principal";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Login } from "./components/auth/Login";
+import { Logout } from "./components/auth/Logout";
 
 function App() {
   return (
-    <Layout>
-      <Principal />
-      <h1>HOla mundo</h1>
-    </Layout>
+    <>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={Login} />
+          <Route exact path="/logout" component={Logout} />
+        </Switch>
+      </Router>
+    </>
   );
 }
 
