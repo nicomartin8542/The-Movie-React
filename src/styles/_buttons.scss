@@ -45,3 +45,12 @@
   }
 }
 
+.btn-search{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  i{
+    color:$color-white
+  }
+}

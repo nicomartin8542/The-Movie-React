@@ -1,12 +1,12 @@
 aside {
   padding-top: 10rem;
-  padding-left:1.5rem ;
+  padding-left:1.3rem ;
   background-color: $color-sidebar;
   //background-color: red;
   top: 0px;
   position: fixed;
   bottom:0;
-  width: 300px;
+  width: 330px;
   z-index:-1;
   opacity: 1;
   @include responsive (desktop){
@@ -17,7 +17,7 @@ aside {
     align-items: center;
     position: initial;
     width: 100%;
-    margin-right: 1.5rem;
+    margin-right: 1.8rem;
     background-color: transparent;
   }
 }
@@ -27,6 +27,9 @@ aside {
   font-size: 1.9rem;
   margin: 1.5rem 0;
   cursor: pointer;
+  @include responsive (desktop){
+    margin-left: 1.5rem
+  }
 }
 
 .logout{

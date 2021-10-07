@@ -4,7 +4,6 @@ import SideBar from "./SideBar";
 const Header = () => {
   return (
     <header className="d-flex">
-
       <div className="header__logo">
         <h1>ReactMovie </h1>
         <i className="fa fa-film " aria-hidden="true"></i>
@@ -18,6 +17,8 @@ const Header = () => {
           aria-hidden="true" >
         </i>
       </button>
+
+      <div className="bg-layout"></div>
 
     </header>
   );
