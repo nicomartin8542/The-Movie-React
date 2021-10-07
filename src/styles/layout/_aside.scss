@@ -2,18 +2,16 @@ aside {
   padding-top: 10rem;
   padding-left:1.3rem ;
   background-color: $color-sidebar;
-  //background-color: red;
   top: 0px;
   position: fixed;
   bottom:0;
   width: 330px;
   z-index:-1;
   opacity: 1;
+
   @include responsive (desktop){
     padding: 0;
-    display: initial;
-    display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     position: initial;
     width: 100%;
@@ -21,6 +19,24 @@ aside {
     background-color: transparent;
   }
 }
+
+
+
+.aside-close{
+  display: none;
+  @include responsive(desktop){
+    display: flex;
+  }
+}
+
+.aside-open{
+  display: block;
+  @include responsive(desktop){
+    display: flex;
+  }
+
+}
+
 /* Menu */
 %menu-item{
   padding: .3rem .8rem;
