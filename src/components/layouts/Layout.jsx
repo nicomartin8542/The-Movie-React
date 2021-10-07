@@ -4,15 +4,17 @@ import SideBar from "./SideBar";
 
 const Layout = ({ children }) => {
   return (
+    <>
+    <Header/>
     <div className="container-app">
-      <SideBar />
-
-      {/* Seccion principal - header */}
+    <SideBar />
+    {/* Seccion principal - header */}
       <div>
-        <Header />
+
         <main>{children}</main>
       </div>
     </div>
+  </>
   );
 };
 

@@ -10,6 +10,18 @@ html {
   font-family: $font-main;
   color:$color-white;
 }
+ul {
+  margin:0;
+  padding: 0;
+}
+ul li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+ul li a {
+  text-decoration: none;
+}
 
 body {
   padding: 0;
@@ -31,3 +43,10 @@ body {
   }
 }
 
+main{
+  margin-top: 50px;
+  @include responsive (desktop){
+    margin-left: 300px;
+  }
+
+}

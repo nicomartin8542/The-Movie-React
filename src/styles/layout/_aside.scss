@@ -1,6 +1,41 @@
 aside {
+  padding-left:1.5rem ;
+  background-color: $color-sidebar;
+  position: relative;
+  top: 50px;
   border-right: 1px solid rgba(107, 107, 107, 0.15);
   @include responsive (desktop){
-    flex: 0 0 300px;
+    position: fixed;
+    bottom:0;
+    width: 300px;
   }
+}
+/* Menu */
+%menu-item{
+  padding: .3rem .8rem;
+  font-size: 1.9rem;
+  margin: 1.5rem 0;
+  cursor: pointer;
+}
+.navbar {
+
+  h2{
+    padding: .5rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+  }
+
+  &__menu{
+    &-item{
+      @extend %menu-item;
+      &:hover{
+        border-right: 3px solid red;
+      }
+    }
+  }
+}
+
+.logout{
+  @extend %menu-item;
+  list-style: none;
 }
