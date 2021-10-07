@@ -6,7 +6,8 @@ const Header = () => {
     <header className="d-flex">
 
       <div className="header__logo">
-        <h1>ReactMovie <i className="fa fa-film " aria-hidden="true"></i></h1>
+        <h1>ReactMovie </h1>
+        <i className="fa fa-film " aria-hidden="true"></i>
       </div>
       <SideBar/>
       <button
