@@ -42,12 +42,17 @@
   position: relative;
   &-body{
     position: relative;
+
     img{
       height: 100%;
       max-width: 100%;
       margin: 0 auto;
       border-radius: 8px;
       display: block;
+      transition: opacity .4 ease;
+      &:hover{
+        opacity: .87;
+      }
     }
     &-pills{
       width: 100%;
@@ -60,10 +65,9 @@
 
       @include d-flex(row);
       justify-content: space-between;
-
     }
-
   }
+
   &-title {
     h3{
     text-align: center;

@@ -3,10 +3,10 @@
   justify-content: center;
 
   @include responsive(desktop){
-
   }
 
   h2{
+    margin: 5px 0 ;
     font-size: 3.5rem;
     @include responsive(desktop){
       margin-right: 2rem
@@ -21,6 +21,7 @@
       text-transform: uppercase;
       opacity: .5;
       transition: opacity .3s ease;
+      cursor: pointer;
       @include responsive(desktop){
         font-size: 2.5rem;
       }
@@ -30,7 +31,7 @@
     }
     li.active {
       opacity: 1;
-      border-bottom: 2px solid $color-orange;
+      border-bottom: 2px solid $color-blue-light;
       padding-bottom: .1rem;
     }
   }
@@ -42,18 +43,38 @@
   display: grid;
   grid-template-columns: repeat(2,50%);
   column-gap: 4px;
-  justify-content: center;
+  row-gap: 10px;
   align-content: center;
   @include responsive(tablet){
-    grid-template-columns: repeat(3,33%);
-
+    grid-template-columns: repeat(3,32%);
   }
   @include responsive(desktop){
-    grid-template-columns: repeat(4,25%);
-
+    grid-template-columns: repeat(4,24%);
   }
 
   &-poster{
     width: 100%;
   }
+}
+
+
+.section__movies-filter{
+  margin: 1.5rem 0;
+  display: grid;
+  grid-template-columns: repeat(3,33%);
+  column-gap: 2px;
+  row-gap: 5px;
+  align-content: center;
+
+  @include responsive(desktop){
+    grid-template-columns: repeat(3,33%);
+  }
+
+  &-poster{
+    width: 100%;
+  }
+}
+
+.section__movies-filter-container{
+  margin: 2rem 0;
 }
