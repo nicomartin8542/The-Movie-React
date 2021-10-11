@@ -1,11 +1,11 @@
-aside {
+nav {
   padding-top: 10rem;
   padding-left:1.3rem ;
   background-color: $color-sidebar;
   top: 0px;
   position: fixed;
   bottom:0;
-  width: 330px;
+  width: 300px;
   z-index:-1;
   opacity: 1;
 
@@ -20,22 +20,24 @@ aside {
   }
 }
 
+.nav {
+  &-close{
+    display: none;
+    @extend %nav;
+  }
 
+  &-open{
+    @extend %nav;
+    display: block;
+  }
+}
 
-.aside-close{
-  display: none;
+%nav{
   @include responsive(desktop){
     display: flex;
   }
 }
 
-.aside-open{
-  display: block;
-  @include responsive(desktop){
-    display: flex;
-  }
-
-}
 
 /* Menu */
 %menu-item{

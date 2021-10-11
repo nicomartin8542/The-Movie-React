@@ -1,3 +1,5 @@
+/*--Estilos Base - por defecto */
+
 *,
 *:before,
 *:after {
@@ -22,6 +24,10 @@ ul li {
 ul li a {
   text-decoration: none;
 }
+h1,h2,h3,p{
+  margin: 0;
+  padding: 0;
+}
 
 body {
   padding: 0;
@@ -31,7 +37,7 @@ body {
   background-color: $color-primary;
 }
 
-/* APP - ASIDE - HEADER */
+
 .container-app {
   display: flex;
   flex-direction: column;
@@ -42,10 +48,40 @@ body {
     flex-direction: row;
   }
 }
-
 main{
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+.main{
+  width: 100%;
   margin-top: 100px;
   padding:0 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 100px;
+  box-sizing: border-box;
+  @include d-flex(col);
+
+  @include responsive (tablet){
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: repeat(4,auto);
+    column-gap: 2rem;
+  }
+}
+
+.wraper-sections{
+  grid-column: 1/1;
+  max-width: 680px;
+  margin: 0 auto;
+  @include responsive (desktop){
+    max-width: 100%;
+  }
+  @include responsive(desktopxl){
+    max-width: 1200px;
+  }
 }
 
 .bg-layout{
@@ -59,6 +95,9 @@ main{
   background-color: rgba(0,0,0,.75);
   &-active{
     display: block;
+  }
+  @include responsive(desktop){
+    display: none;
   }
 }
 

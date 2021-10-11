@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import SideBar from "./SideBar";
+import Navbar from "./Navbar";
 
 const Header = () => {
 
   const [openmenu,setOpen] = useState(false);
-
   const handleOpenMenu = () => {
     setOpen(!openmenu);
   }
-
   const classBgLayout = (openmenu) ? 'bg-layout bg-layout-active' : 'bg-layout';
 
   return (
@@ -17,7 +15,7 @@ const Header = () => {
         <h1>ReactMovie </h1>
         <i className="fa fa-film " aria-hidden="true"></i>
       </div>
-      <SideBar openMenu={openmenu}/>
+      <Navbar openMenu={openmenu}/>
       <button
         className="btn-menu"
         onClick={handleOpenMenu}

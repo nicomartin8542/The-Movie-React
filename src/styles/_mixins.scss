@@ -1,6 +1,12 @@
 
 @mixin responsive ($breakpoint) {
 
+  @if $breakpoint==desktopxl {
+    @media only screen and (min-width: $size-xxl) {
+      @content;
+    }
+  }
+
   @if $breakpoint==desktop {
     @media only screen and (min-width: $size-xl) {
       @content;
@@ -29,3 +35,17 @@
 }
 
 
+@mixin heigth-carousel(){
+  @include responsive(mobile){
+    height: 450px;
+  }
+  @include responsive(tablet){
+    height: 500px;
+  }
+  @include responsive(desktop){
+    height: 550px;
+  }
+  @include responsive(desktopxl){
+    height: 600px;
+  }
+}

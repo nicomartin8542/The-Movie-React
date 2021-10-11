@@ -1,11 +1,11 @@
 import React from "react";
-
+import { Fragment } from "react";
+import { HomeScreen } from "../home/HomeScreen";
 const Principal = () => {
   return (
-    <>
-      <h1>Principal</h1>
-
-    </>
+    <Fragment>
+        <HomeScreen/>
+    </Fragment>
   );
 };
 

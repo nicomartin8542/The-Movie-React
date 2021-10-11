@@ -1,0 +1,59 @@
+.section__container{
+  @include d-flex(col);
+  justify-content: center;
+
+  @include responsive(desktop){
+
+  }
+
+  h2{
+    font-size: 3.5rem;
+    @include responsive(desktop){
+      margin-right: 2rem
+    }
+  }
+
+  &-filter{
+    @include d-flex(row);
+    li{
+      margin-right: 1rem;
+      font-size: 2rem;
+      text-transform: uppercase;
+      opacity: .5;
+      transition: opacity .3s ease;
+      @include responsive(desktop){
+        font-size: 2.5rem;
+      }
+      &:hover{
+        opacity: 1;
+      }
+    }
+    li.active {
+      opacity: 1;
+      border-bottom: 2px solid $color-orange;
+      padding-bottom: .1rem;
+    }
+  }
+}
+
+.section__container-movies
+{
+  margin: 5rem 0;
+  display: grid;
+  grid-template-columns: repeat(2,50%);
+  column-gap: 4px;
+  justify-content: center;
+  align-content: center;
+  @include responsive(tablet){
+    grid-template-columns: repeat(3,33%);
+
+  }
+  @include responsive(desktop){
+    grid-template-columns: repeat(4,25%);
+
+  }
+
+  &-poster{
+    width: 100%;
+  }
+}
