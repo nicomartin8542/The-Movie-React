@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CardSection = ({pills=true}) => {
+export const CardMoviePoster = ({pills=true}) => {
   return (
     <div className="card__movie">
       <div className="card__movie-body">
@@ -8,9 +8,12 @@ export const CardSection = ({pills=true}) => {
       alt="poster"  className="card__movier-poster"/>
       {
         (pills) &&
-        <div className="card__movie-body-pills">
-           <span className="pills pills-yellow">Pelicula</span>
-          <span className="pills pills-orange">2021</span>
+        <div className="card__movie-body-info">
+           <p>
+            <i className="fa fa-star" aria-hidden="true"></i>
+            <span>4.8</span>
+          </p>
+          <p>Action | Adventure</p>
         </div>
       }
 

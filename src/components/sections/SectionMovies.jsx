@@ -1,7 +1,7 @@
 import React from 'react'
-import { CardSection } from '../cards/CardSection'
+import { CardMoviePoster } from '../cards/CardMoviePoster'
 
-export const Sections = ({titulo}) => {
+export const SectionMovies = ({titulo}) => {
   return (
     <section className="section__container">
       <h2>{titulo}</h2>
@@ -11,10 +11,14 @@ export const Sections = ({titulo}) => {
         <li>Ranking</li>
       </ul>
       <div className="section__container-movies">
-        <CardSection/>
-        <CardSection/>
-        <CardSection/>
-        <CardSection/>
+        <CardMoviePoster/>
+        <CardMoviePoster/>
+        <CardMoviePoster/>
+        <CardMoviePoster/>
+        <CardMoviePoster/>
+        <CardMoviePoster/>
+        <CardMoviePoster/>
+        <CardMoviePoster/>
       </div>
 
     </section>

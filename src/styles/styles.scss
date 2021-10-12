@@ -8,9 +8,10 @@
 @import './layout/header';
 @import './layout/navbar';
 @import './layout/sidebar';
+@import './layout/footer';
 @import './layout/sections';
-@import './buttons';
-@import './inputs';
+@import './components/buttons';
+@import './components/inputs';
 
-@import './carousel.scss';
-@import './cards';
+@import './components/carousel';
+@import './components/cards';

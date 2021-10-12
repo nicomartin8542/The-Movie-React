@@ -41,15 +41,16 @@
 {
   margin: 5rem 0;
   display: grid;
-  grid-template-columns: repeat(2,50%);
+  grid-template-columns: repeat(3,33%);
   column-gap: 4px;
   row-gap: 10px;
   align-content: center;
   @include responsive(tablet){
-    grid-template-columns: repeat(3,32%);
+    grid-template-columns: repeat(auto-fit,minmax(20%,28%));
+    grid-template-rows: 1fr;
   }
   @include responsive(desktop){
-    grid-template-columns: repeat(4,24%);
+    grid-template-columns: repeat(auto-fit,minmax(20%,24%));
   }
 
   &-poster{

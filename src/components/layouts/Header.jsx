@@ -20,14 +20,9 @@ const Header = () => {
         className="btn-menu"
         onClick={handleOpenMenu}
       >
-        <i
-          className="fa fa-bars fa-2x"
-          aria-hidden="true" >
-        </i>
+        <i className="fa fa-bars fa-2x"aria-hidden="true" ></i>
       </button>
-
       <div className={classBgLayout}></div>
-
     </header>
   );
 };
