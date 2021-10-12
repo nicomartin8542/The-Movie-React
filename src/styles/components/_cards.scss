@@ -13,7 +13,8 @@
       margin: 0 auto;
       border-radius: 8px;
       display: block;
-      transition: opacity .4 ease;
+      transition: opacity .4s ease;
+      box-shadow: 4px 4px 3px rgba(0 ,0 ,12 , .58);
       &:hover{
         opacity: .87;
       }

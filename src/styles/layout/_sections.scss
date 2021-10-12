@@ -50,7 +50,10 @@
     grid-template-rows: 1fr;
   }
   @include responsive(desktop){
-    grid-template-columns: repeat(auto-fit,minmax(20%,24%));
+    grid-template-columns: repeat(auto-fit,minmax(20%,23%));
+    padding: 0 10px;
+    column-gap: 10px;
+    row-gap: 30px;
   }
 
   &-poster{
@@ -62,8 +65,8 @@
 .section__movies-filter{
   margin: 1.5rem 0;
   display: grid;
-  grid-template-columns: repeat(3,33%);
-  column-gap: 2px;
+  grid-template-columns: repeat(3,30%);
+  column-gap: 10px;
   row-gap: 5px;
   align-content: center;
 
