@@ -7,6 +7,7 @@ import { Sidebar } from '../sections/Sidebar'
 export const HomeScreen = () => {
   return (
     <Fragment>
+
     <Carousel/>
 
     <div className='main'>
