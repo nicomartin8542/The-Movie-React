@@ -11,6 +11,7 @@ const useAutenticacion = () => {
     });
   }, []);
 
+  console.log(userAuth);
   return userAuth;
 };
 
