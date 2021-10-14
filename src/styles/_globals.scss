@@ -3,14 +3,26 @@ $size-xl: 1000px;
 $size-md: 768px;
 $size-sm: 375px;
 
+$size-xxl: 1440px;
+$size-xl: 1000px;
+$size-md: 768px;
+$size-sm: 320px;
+
 $font-main: "Oswald", sans-serif;
 
 /* Paleta de Colores */
 
-$color-primary: #242528;
+$color-primary: #030e30;
 $color-white: #d1d1d1;
-$color-grey: #adb5bd;
-$color-blue-light: #5149dd;
-$color-sidebar: #191b1f;
-$color-black: #0c0c0c;
+$color-white-2: #ffff;
+$color-gray-1: #dee2e6;
+$color-gray-2: #ced4da;
+$color-gray-3: #adb5bd;
+$color-danger: #dc3545;
+
+$color-sidebar: #020b26;
 $color-orange: #d03026;
+$color-yellow: #9d7e1d;
+$color-blue-light: #08b3e5;
+$color-bg-title: #1e2747;
+$color-sidebar-title: #6c92cc;

@@ -1,3 +1,5 @@
+/*--Estilos Base - por defecto */
+
 *,
 *:before,
 *:after {
@@ -22,6 +24,10 @@ ul li {
 ul li a {
   text-decoration: none;
 }
+h1,h2,h3,p{
+  margin: 0;
+  padding: 0;
+}
 
 body {
   padding: 0;
@@ -29,9 +35,10 @@ body {
   font-size: 1.4rem /* 16px */;
   line-height: 1.5;
   background-color: $color-primary;
+  min-width: 375px;
 }
 
-/* APP - ASIDE - HEADER */
+
 .container-app {
   display: flex;
   flex-direction: column;
@@ -42,9 +49,62 @@ body {
     flex-direction: row;
   }
 }
-
 main{
-  margin-top: 50px;
-  padding:0 20px;
+  width: 100%;
+  min-width: $size-sm;
+  margin: 0 auto;
+
+}
+.main{
+  width: 100%;
+  margin-top: 100px;
+  padding:0 2.5rem;
+  margin: 0 auto;
+  margin-top: 100px;
+  box-sizing: border-box;
+  @include d-flex(col);
+
+  @include responsive (tablet){
+
+  }
+  @include responsive (desktop){
+    padding:0 5rem;
+    display: grid;
+    grid-template-rows: repeat(4,auto);
+    justify-content: center;
+    grid-template-columns: 75% 25%;
+
+
+  }
+}
+
+.wraper-sections{
+  border: 1px solid yellow;
+  grid-column: 1/1;
+  max-width: 680px;
+  margin: 0 auto;
+  @include responsive (desktop){
+    max-width: 100%;
+  }
+  @include responsive(desktopxl){
+    max-width: 1200px;
+  }
+}
+
+.bg-layout{
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  display: none;
+  background-color: rgba(0,0,0,.75);
+  &-active{
+    display: block;
+  }
+  @include responsive(desktop){
+    display: none;
+  }
 }
 

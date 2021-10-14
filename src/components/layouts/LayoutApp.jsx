@@ -1,8 +1,8 @@
 import React from "react";
-import Layout from "./components/layouts/Layout";
-import Principal from "./components/layouts/Principal";
+import Layout from "./Layout";
+import Principal from "./Principal";
 
-function App() {
+function LayoutApp() {
   return (
     <Layout>
       <Principal />
@@ -10,4 +10,4 @@ function App() {
   );
 }
 
-export default App;
+export default LayoutApp;

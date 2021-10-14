@@ -1,32 +1,53 @@
-aside {
+nav {
   padding-top: 10rem;
-  padding-left:1.5rem ;
+  padding-left:1.3rem ;
   background-color: $color-sidebar;
-  //background-color: red;
   top: 0px;
   position: fixed;
   bottom:0;
   width: 300px;
   z-index:-1;
   opacity: 1;
+
   @include responsive (desktop){
     padding: 0;
-    display: initial;
-    display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
     position: initial;
     width: 100%;
-    margin-right: 1.5rem;
+    margin-right: 1.8rem;
     background-color: transparent;
   }
 }
+
+.nav {
+  &-close{
+    display: none;
+    @extend %nav;
+  }
+
+  &-open{
+    @extend %nav;
+    display: block;
+  }
+}
+
+%nav{
+  @include responsive(desktop){
+    display: flex;
+  }
+}
+
+
 /* Menu */
 %menu-item{
   padding: .3rem .8rem;
   font-size: 1.9rem;
   margin: 1.5rem 0;
   cursor: pointer;
+  @include responsive (desktop){
+    margin-left: 1.5rem
+  }
 }
 
 .logout{

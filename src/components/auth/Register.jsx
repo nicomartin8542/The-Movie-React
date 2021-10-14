@@ -3,13 +3,12 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import FirebaseContext from "../../firebase/context";
 import useForm from "../../hooks/useForm";
-import validaLogin from "../../validates/validaLogin";
+import validaRegister from "../../validates/validaRegister";
 import AlertasLogin from "../alerts/AlertasLogin";
 import { Spinner } from "../spinner/Spinner";
 
-export const Login = ({ history }) => {
-  //State locales
-  const [errorFirebase, setErrorFirebase] = useState(null);
+export const Register = ({ history }) => {
+  //State local
   const [spinner, setSpinner] = useState(false);
 
   //Context de Firebase
@@ -17,20 +16,20 @@ export const Login = ({ history }) => {
   const { firebase } = firebaseContext;
 
   //State inicial para el form
-  const initialState = { email: "", password: "" };
+  const initialState = { name: "", email: "", password: "" };
+  const [errorFirebase, setErrorFirebase] = useState(null);
 
   //Custom hooks de formularios
   const { values, error, handleFormSubmit, handleInputChange, handleBlur } =
-    useForm(initialState, validaLogin, logear);
+    useForm(initialState, validaRegister, register);
 
-  //Recupero variables del useForm
-  const { email, password } = values;
+  const { name, email, password } = values;
 
   //Logeo usuario
-  async function logear() {
+  async function register() {
     setSpinner(true);
     try {
-      const usuario = await firebase.login(email, password);
+      const usuario = await firebase.register(name, email, password);
       setSpinner(false);
       usuario ? history.push("/home") : setErrorFirebase("Ocurrio un error");
     } catch (err) {
@@ -46,8 +45,22 @@ export const Login = ({ history }) => {
         <Spinner />
       ) : (
         <div className="container__form">
-          <h2>Iniciar Sesion</h2>
+          <h2>Registrarse</h2>
           <form onSubmit={handleFormSubmit}>
+            <input
+              type="text"
+              placeholder="Juan Perez"
+              name="name"
+              autoComplete="off"
+              value={name}
+              onChange={handleInputChange}
+              onBlur={handleBlur}
+            />
+
+            {error.name && (
+              <AlertasLogin clase="login__error_datos" msg={error.name} />
+            )}
+
             <input
               type="email"
               placeholder="nombre@gmail.com"
@@ -57,11 +70,9 @@ export const Login = ({ history }) => {
               onChange={handleInputChange}
               onBlur={handleBlur}
             />
-
             {error.email && (
               <AlertasLogin clase="login__error_datos" msg={error.email} />
             )}
-
             <input
               type="password"
               autoComplete="off"
@@ -78,7 +89,8 @@ export const Login = ({ history }) => {
 
             <button type="submit">Ingresar</button>
           </form>
-          <Link to="/register">Crear Usuario</Link>
+
+          <Link to="/">Iniciar Sesion</Link>
         </div>
       )}
 

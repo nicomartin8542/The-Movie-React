@@ -1,12 +1,11 @@
 header{
-  position: relative;
+  position: fixed;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   height:80px;
-  //border-bottom: 2px solid rgba(107, 107, 107, 0.15);
-  background-color: #343434;
+  background-color: $color-sidebar;
   z-index:10;
   @include d-flex(row);
   justify-content: space-between;
@@ -28,10 +27,11 @@ header{
     margin: 0 10px;
     font-size: 3rem;
     text-transform: uppercase;
+    color:$color-blue-light;
   }
   i{
     padding: 0 .8rem;
     font-size: 3.3rem;
-    color:$color-orange;
+    color:$color-blue-light;
   }
 }

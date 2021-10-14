@@ -1,25 +1,26 @@
 .container {
   max-width: 90%;
   width: 600px;
-  margin: 2rem auto;
+  margin: 23rem auto;
   overflow: hidden;
 }
 
 .container__form {
-  padding: 0 2rem 2rem 2rem;
+  padding: 3rem;
   background-color: $color-white;
   border: 1px solid;
 
   & h2 {
-    color: $color-black;
+    color: $color-sidebar;
     text-align: center;
     margin-bottom: 1rem;
   }
 
   & a {
     text-decoration: none;
-    color: $color-black;
+    color: $color-sidebar;
     font-size: 1.8rem;
+    margin-top: 2rem;
   }
 }
 
@@ -29,10 +30,10 @@ form {
   & input {
     padding: 1rem 1.5rem;
     border-radius: 0.3rem;
-    border: 0.1rem solid $color-grey;
+    border: 0.1rem solid $color-gray-2;
     transition: 0.3s ease all;
     width: 100%;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
 
   & input:focus {
@@ -45,12 +46,35 @@ form {
     border: none;
     width: 100%;
     cursor: pointer;
-    color: $color-white;
+    color: $color-white-2;
     display: inline-block;
     padding: 1rem 1.5rem;
     border-radius: 0.3rem;
     text-align: center;
     line-height: 2.2rem;
     transition: 0.3s ease all;
+  }
+}
+
+.login__error_firebase {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: $color-danger;
+  & p {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    color: $color-white;
+  }
+}
+
+.login__error_datos {
+  margin-bottom: 1rem;
+
+  & p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $color-danger;
+    margin-left: 0.3rem;
   }
 }
