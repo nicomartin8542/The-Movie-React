@@ -1,6 +1,6 @@
 /* eslint-disable jsx-a11y/alt-text */
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import FirebaseContext from "../../firebase/context";
 import useForm from "../../hooks/useForm";
@@ -29,7 +29,12 @@ export const Login = ({ history }) => {
   const { email, password } = values;
 
   //Pregunto si el usuario esta logeado
-  if (usuario) history.push("/home");
+
+  useEffect(() => {
+    if (usuario) history.push("/home");
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [usuario]);
 
   //Logeo usuario
   async function logear() {
@@ -82,7 +87,7 @@ export const Login = ({ history }) => {
             )}
 
             <button type="submit">Ingresar</button>
-            <GoogleBtn />
+            <GoogleBtn setSpinner={setSpinner} />
           </form>
           <Link to="/register">Crear Usuario</Link>
         </div>

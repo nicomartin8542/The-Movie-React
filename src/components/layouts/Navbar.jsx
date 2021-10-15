@@ -11,8 +11,6 @@ const Navbar = ({ openMenu }) => {
   const firebaseContext = useContext(FirebaseContext);
   const { firebase, usuario } = firebaseContext;
 
-  console.log(usuario.displayName);
-
   //Utilizo el history del react router dom
   const history = useHistory();
 

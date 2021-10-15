@@ -8,7 +8,11 @@ export const GoogleBtn = () => {
 
   //Logear por google
   const loginGoogle = async () => {
-    await firebase.loginGoogle();
+    try {
+      await firebase.loginGoogle();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
