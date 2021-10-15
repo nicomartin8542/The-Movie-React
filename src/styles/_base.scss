@@ -16,7 +16,7 @@ ul {
   margin:0;
   padding: 0;
 }
-ul li {
+ul ,li {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -68,11 +68,12 @@ main{
 
   }
   @include responsive (desktop){
-    padding:0 5rem;
+    padding: 0 5rem;
     display: grid;
-    grid-template-rows: repeat(4,auto);
-    justify-content: center;
-    grid-template-columns: 75% 25%;
+    grid-template-rows: repeat(4, auto);
+    justify-content: space-between;
+    grid-template-columns: 70% 25%;
+    column-gap: 5rem;
 
 
   }
@@ -87,7 +88,7 @@ main{
     max-width: 100%;
   }
   @include responsive(desktopxl){
-    max-width: 1200px;
+
   }
 }
 

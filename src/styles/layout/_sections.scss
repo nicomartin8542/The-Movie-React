@@ -34,6 +34,8 @@
   }
 }
 
+/* -- Section Container Movies --*/
+
 .section__container-movies
 {
   margin: 5rem 0;
@@ -59,7 +61,7 @@
   }
 }
 
-
+/*-- Section movies filter in Sidebar --*/
 .section__movies-filter{
   margin: 1.5rem 0;
   display: grid;
@@ -83,4 +85,32 @@
 
 .section__movies-filter-container{
   margin: 2rem 0;
+}
+
+/* -- Section Categorias in Sidebar --*/
+
+.section__category{
+  @include d-flex(row);
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+
+  &-item{
+    text-align: center;
+    width: 48%;
+    margin: 3px;
+    padding: 10px;
+    background-color: $color-bg-title;
+    border-radius: 8px;
+    font-size: 2rem;
+    transition: background-color .3s ease;
+    cursor: pointer;
+    &:hover{
+      background-color: darken($color: $color-bg-title, $amount: 3.5);
+    }
+    @include responsive(desktop){
+      width: 45%;
+      font-size: 1.4rem;
+    }
+  }
 }
