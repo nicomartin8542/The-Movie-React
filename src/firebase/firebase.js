@@ -1,7 +1,9 @@
 import { initializeApp } from "firebase/app";
 import {
+  GoogleAuthProvider,
   getAuth,
   signInWithEmailAndPassword,
+  signInWithRedirect,
   createUserWithEmailAndPassword,
   updateProfile,
   signOut,
@@ -13,11 +15,18 @@ class Firebase {
   constructor() {
     const app = initializeApp(firebaseConfig);
     this.auth = getAuth(app);
+    this.provider = new GoogleAuthProvider();
+    this.provider.addScope("https://www.googleapis.com/auth/contacts.readonly");
   }
 
   //Logearse
   async login(email, password) {
     return await signInWithEmailAndPassword(this.auth, email, password);
+  }
+
+  //Logeo por google
+  async loginGoogle() {
+    return await signInWithRedirect(this.auth, this.provider);
   }
 
   //Crear cuenta
