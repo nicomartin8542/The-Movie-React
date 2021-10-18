@@ -4,9 +4,7 @@ import { useHistory } from "react-router-dom";
 import { Search } from "../search/Search";
 import { formatearMayuscula } from "../../helpers/capitalizarString";
 
-const Navbar = ({ openMenu }) => {
-  const classOpen = openMenu ? "nav-open" : "nav-close";
-
+const Navbar = ({ openMenu, classanimation }) => {
   //Utilizo el context de firebase
   const firebaseContext = useContext(FirebaseContext);
   const { firebase, usuario } = firebaseContext;
@@ -20,8 +18,21 @@ const Navbar = ({ openMenu }) => {
     history.push("/");
   };
 
+  const classOpen = openMenu
+    ? `nav-open ${classanimation}`
+    : `nav-close ${classanimation}`;
+
+  const handleAnimationEnd = (e) => {
+    if (e.animationName === "slideOutLeft") {
+      e.target.classList.remove("animate__slideOutLeft");
+    }
+  };
+
   return (
-    <nav className={classOpen}>
+    <nav
+      className={`animate__animated ${classOpen}`}
+      onAnimationEnd={handleAnimationEnd}
+    >
       <Search />
       <p className="user-name">
         Bienvenido, {formatearMayuscula(usuario.displayName)}

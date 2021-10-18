@@ -6,6 +6,7 @@ header{
   left: 0;
   height:80px;
   background-color: $color-sidebar;
+  opacity: .97;
   z-index:10;
   @include d-flex(row);
   justify-content: space-between;
@@ -20,18 +21,17 @@ header{
   padding-left:1.5rem ;
   display: flex ;
   align-items: center;
-  @include responsive(desktop){
-    border-right: 1px solid rgba(107, 107, 107, 0.15);
-  }
   h1{
     margin: 0 10px;
     font-size: 3rem;
     text-transform: uppercase;
-    color:$color-blue-light;
+    @extend %gradient-text-blue;
+    i{
+      font-size: 2.9rem;
+      padding: .3rem 1.2rem;
+      margin-bottom: .8rem;
+      vertical-align: middle;
+    }
   }
-  i{
-    padding: 0 .8rem;
-    font-size: 3.3rem;
-    color:$color-blue-light;
-  }
+
 }
