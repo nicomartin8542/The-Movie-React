@@ -4,7 +4,27 @@
 *:before,
 *:after {
   box-sizing: inherit;
+  scrollbar-width: thin;
+  scrollbar-color: $color-blue-light $color-blue-light;
 }
+/* Scroll horizontal navegador web */
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $color-sidebar;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $color-blue-light;
+  border-radius: 20px;
+  border: 3px solid $color-primary;
+}
+
+
+/* --- */
 html {
   box-sizing: border-box;
   height: 100%;
