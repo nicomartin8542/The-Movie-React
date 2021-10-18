@@ -1,0 +1,57 @@
+%button{
+  display: block;
+  padding: 10px;
+  font-size: 1.7rem;
+  text-transform: capitalize;
+  text-align: center;
+  letter-spacing: .8px;
+  border-radius: 8px;
+  transition: background-color .3s ease;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.btn{
+  @extend %button;
+  &-orange{
+    width: 100px;
+    background-color: $color-orange;
+    color:$color-white;
+    margin-top: 2rem;
+  }
+}
+
+.block{
+  @extend %button;
+  width: 100%;
+}
+
+/* Botones Especificos */
+
+.btn-menu{
+  border:none;
+  outline: none;
+  height: 30px;
+  margin-right: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: transparent;
+  @include responsive(desktop){
+    display: none;
+  }
+  i{
+    color:$color-white
+  }
+}
+
+.btn-search{
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  i{
+    color:$color-white
+  }
+}
+

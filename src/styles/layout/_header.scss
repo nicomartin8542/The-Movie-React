@@ -1,0 +1,37 @@
+header{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  height:80px;
+  background-color: $color-sidebar;
+  opacity: .97;
+  z-index:10;
+  @include d-flex(row);
+  justify-content: space-between;
+  align-items: center;
+  @include responsive(desktop){
+    border-bottom: 0;
+
+  }
+}
+.header__logo{
+  width: 100%;
+  padding-left:1.5rem ;
+  display: flex ;
+  align-items: center;
+  h1{
+    margin: 0 10px;
+    font-size: 3rem;
+    text-transform: uppercase;
+    @extend %gradient-text-blue;
+    i{
+      font-size: 2.9rem;
+      padding: .3rem 1.2rem;
+      margin-bottom: .8rem;
+      vertical-align: middle;
+    }
+  }
+
+}

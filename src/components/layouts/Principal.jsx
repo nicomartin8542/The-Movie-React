@@ -1,10 +1,14 @@
 import React from "react";
+import { Fragment } from "react";
+import { HomeScreen } from "../home/HomeScreen";
+import { Footer } from "./Footer";
 
 const Principal = () => {
   return (
-    <>
-      <h1>Principal</h1>
-    </>
+    <Fragment>
+      <HomeScreen/>
+      <Footer/>
+    </Fragment>
   );
 };
 

@@ -1,0 +1,29 @@
+.pills{
+  font-size: 1.2rem;
+  border-radius: 8px;
+  @include d-flex(row);
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+
+  &-blue{
+    background-color: $color-blue-light;
+  }
+
+  &-orange{
+    background-color: $color-orange;
+  }
+
+  &-yellow{
+    background-color: $color-yellow;
+  }
+}
+
+%gradient-text-blue{
+  cursor: pointer;
+  color:$color-blue-light;
+  background: $gradient-brand;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+}

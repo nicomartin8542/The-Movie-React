@@ -1,0 +1,16 @@
+.sidebar{
+
+position: relative;
+width: 100%;
+text-align: center;
+grid-column: 2/3;
+grid-row: 1;
+
+  &-title{
+    padding: 10px 0;
+    border-radius: 8px;
+    background-color: $color-bg-title;
+    color:$color-sidebar-title;
+  }
+}
+
