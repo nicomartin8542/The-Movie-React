@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useContext, useEffect } from "react";
+import { FirebaseContext } from "../../firebase";
 import Layout from "./Layout";
 import Principal from "./Principal";
 
