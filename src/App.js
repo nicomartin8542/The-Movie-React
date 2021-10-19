@@ -1,13 +1,24 @@
 import React from "react";
-import Layout from "./components/layouts/Layout";
-import Principal from "./components/layouts/Principal";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { Login } from "./components/auth/Login";
+import { Register } from "./components/auth/Register";
+import LayoutApp from "./components/layouts/LayoutApp";
+import RutaPrivada from "./components/rutas/RutaPrivada";
+import FirebaseState from "./firebase/FirebaseState";
 
 function App() {
   return (
-    <Layout>
-      <Principal />
-
-    </Layout>
+    <>
+      <Router>
+        <Switch>
+          <FirebaseState>
+            <Route exact path="/" component={Login} />
+            <Route exact path="/register" component={Register} />
+            <RutaPrivada exact path="/home" component={LayoutApp} />
+          </FirebaseState>
+        </Switch>
+      </Router>
+    </>
   );
 }
 

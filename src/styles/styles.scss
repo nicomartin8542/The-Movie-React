@@ -1,17 +1,19 @@
 /* Agregar los archivos parciales */
 
-@import './globals';
-@import './mixins';
-@import './base';
-@import './utilities';
+@import "./globals";
+@import "./mixins";
+@import "./base";
+@import "./utilities";
 /* Layout */
-@import './layout/header';
-@import './layout/navbar';
-@import './layout/sidebar';
-@import './layout/footer';
-@import './layout/sections';
-@import './components/buttons';
-@import './components/inputs';
+@import "./layout/header";
+@import "./layout/navbar";
+@import "./layout/sidebar";
+@import "./layout/footer";
+@import "./layout/sections";
+@import "./components/buttons";
+@import "./components/inputs";
 
-@import './components/carousel';
-@import './components/cards';
+@import "./components/carousel";
+@import "./components/cards";
+@import "./auth/login";
+@import "./spinner/spinner";

@@ -1,21 +1,31 @@
+$size-xxl: 1200px;
+$size-xl: 1000px;
+$size-md: 768px;
+$size-sm: 375px;
 
-$size-xxl:1440px;
-$size-xl:1000px;
-$size-md:768px;
-$size-sm:320px;
+$size-xxl: 1440px;
+$size-xl: 1000px;
+$size-md: 768px;
+$size-sm: 320px;
 
-$font-main :'Oswald',sans-serif;
+$font-main: "Oswald", sans-serif;
 
 /* Paleta de Colores */
+$color-white: #d1d1d1;
+$color-white-2: #ffff;
+$color-gray-1: #dee2e6;
+$color-gray-2: #ced4da;
+$color-gray-3: #adb5bd;
+$color-danger: #dc3545;
 
-$color-primary:#060e28;
-$color-white:#d1d1d1;
+$color-sidebar: #020b26;
+$color-orange: #d03026;
+$color-yellow: #9d7e1d;
+$color-blue-light: #08b3e5;
+$color-bg-title: #1e2747;
+$color-sidebar-title: #6c92cc;
 
-$color-sidebar:#020b26;
-$color-orange:#d03026;
-$color-yellow:#9d7e1d;
-$color-blue-light:#08b3e5;
-$color-bg-title:#1e2747;
-$color-sidebar-title:#6c92cc;
-
-$gradient-brand:-webkit-linear-gradient(#17459c, $color-blue-light);
+$google-blue: #4285f4;
+$button-active-blue: #1669f2;
+$color-primary: #060e28;
+$gradient-brand: -webkit-linear-gradient(#17459c, $color-blue-light);
