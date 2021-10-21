@@ -31,8 +31,9 @@ export const Login = ({ history }) => {
   //Pregunto si el usuario esta logeado
 
   useEffect(() => {
-    if (usuario) history.push("/home");
-
+    return () => {
+      if (usuario) history.push("/home");
+    };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [usuario]);
 
