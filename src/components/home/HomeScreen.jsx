@@ -1,23 +1,19 @@
 import React from 'react'
-import { Fragment } from 'react'
-import { Carousel } from '../carousel/Carousel'
-import { SectionMovies } from '../sections/SectionMovies'
-import { Sidebar } from '../sections/Sidebar'
+import { SectionMovies } from '../sections/movies/SectionMovies'
+import { SectionSeries } from '../sections/series/SectionSeries'
+import {Sidebar} from '../layouts/Sidebar';
+
 
 export const HomeScreen = () => {
   return (
-    <Fragment>
-
-    <Carousel/>
-
-    <div className='main'>
+      <div className='main'>
       <div className="wrapper-sections">
         <SectionMovies titulo='Peliculas'/>
-        <SectionMovies titulo='Series'/>
+        <SectionSeries titulo='Series'/>
       </div>
-      <Sidebar/>
+       <Sidebar/>
     </div>
 
-  </Fragment>
+
   )
 }

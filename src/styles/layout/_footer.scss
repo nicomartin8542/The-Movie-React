@@ -3,3 +3,60 @@
   width: 100%;
   text-align: center;
 }
+
+.sitemap{
+  margin: 2rem 0;
+
+  ul{
+    margin: 2rem 0;
+    @include responsive(desktop){
+      display: flex;
+      justify-content: center;
+    }
+    li{
+      margin: 0 1rem;
+      font-size: 1.6rem;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover{
+        opacity: 1;
+        color: lighten($color: $color-purple, $amount: .5);
+      }
+    }
+  }
+}
+
+.banner{
+  height: 100px;
+  background-color: $color-bg-title;
+  @include responsive(desktop){
+    height: 150px;
+  }
+  h2{
+    text-transform: uppercase;
+    vertical-align: middle;
+    line-height: 9rem;
+    color:$color-white;
+    font-size: 2.8rem;
+
+    @include responsive(desktop){
+      line-height: 16rem;
+
+    }
+
+  }
+}
+h5.copy{
+  span{
+      font-size: 3rem;
+      color:$color-purple;
+    }
+
+}
+
+.links{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

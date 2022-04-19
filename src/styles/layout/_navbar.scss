@@ -51,6 +51,7 @@ nav {
   font-size: 1.9rem;
   margin: 1.5rem 0;
   cursor: pointer;
+
   @include responsive (desktop){
     margin-left: 1.5rem
   }
@@ -59,6 +60,11 @@ nav {
 .logout{
   @extend %menu-item;
   list-style: none;
+  transition: color .3s ease-in;
+  &:hover{
+    color:$color-purple;
+
+  }
 }
 
 @keyframes slideout {

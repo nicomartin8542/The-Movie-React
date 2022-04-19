@@ -1,4 +1,6 @@
 import React from "react";
+import { Carousel } from "../carousel/Carousel";
+
 import Header from "./Header";
 
 
@@ -6,9 +8,11 @@ const Layout = ({ children }) => {
   return (
     <>
     <Header/>
-    <div className="container-app">
-      <main>{children}</main>
-    </div>
+    <Carousel/>
+       <div className="container-app">
+        <main>{children}</main>
+      </div>
+
   </>
   );
 };

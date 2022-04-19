@@ -1,12 +1,26 @@
 .carousel__container{
   position: relative;
   width: 100%;
+  justify-content: center;
+  align-items: center;
+  &:after{
+    content: '';
+    z-index: 1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    pointer-events: none;
+    transition: .2s;
+    height: 45%;
+    opacity: .9;
+    background:linear-gradient(to bottom,rgba(20,26,50,1) 1%,rgba(20,26,50,0) 100%);
+  }
   @include heigth-carousel;
-  top:80px;
   @include d-flex(row);
   flex-wrap: nowrap;
   overflow: auto;
-  border-radius: 10px;
+
   &__item{
     @include heigth-carousel;
   }
@@ -33,24 +47,51 @@
 
 .carousel__info{
   position: absolute;
-  top:25%;
+  top:35%;
   margin-left: 10%;
   z-index: 99;
   color:white;
   text-align: start;
+
+  &-overview{
+    width: 100%;
+    max-width: 500px;
+    height: 180px;
+    overflow: auto;
+    @include responsive(tablet){
+      max-width: 600px;
+      font-size: 2rem;
+    }
+    @include responsive(desktop){
+      max-width: 800px;
+    }
+  }
+
   h3{
-    font-size: 7rem;
+    font-size: 2.8rem;
+    @include responsive(tablet){
+      font-size: 3.2rem;
+    }
+    @include responsive(desktop){
+      font-size: 5.2rem;
+    }
     letter-spacing: 1.8px;
   }
   &-favorite{
     p{
-      font-size: 1.8rem;
+      font-size: 1.6rem;
+      @include responsive(tablet){
+        margin-top: .5rem;
+        font-size: 1.8rem;
+        color:#FFFFFF;
+      }
       i{
-        color:#ffd900;
+        padding-right: 1rem;
+        color:$color-star;
       }
     }
-  }
 
+  }
 }
 
 
@@ -63,12 +104,22 @@
   left: 0;
   right: 0;
   z-index: 1;
-  background: linear-gradient(to bottom,transparent 0%,rgba(4,11,19,0.25) 65%,#020a25 100%);
+  background: $gradient-carousel;
+
 }
 
 .control-dots{
   z-index: 99;
 }
+.carousel .control-dots .dot.selected, .carousel .control-dots .dot:hover{
+    background-color: $color-purple;
+}
+.carousel .control-dots .dot {
+  height: 15px;
+  width: 15px;
+  opacity: 1;
+}
+
 .carousel-root{
   width: 100%;
 }

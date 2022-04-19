@@ -1,21 +1,30 @@
 
-$size-xxl:1440px;
-$size-xl:1000px;
-$size-md:768px;
+$size-xxl:1200px;
+$size-xl:1024px;
+$size-lg:778px;
+$size-md:520px;
 $size-sm:320px;
 
 $font-main :'Oswald',sans-serif;
 
+$base-font-size: 18px;
+$heading-scale: 8; // amount of px headings grow from h6 to h1
+
 /* Paleta de Colores */
 
-$color-primary:#060e28;
-$color-white:#d1d1d1;
-
-$color-sidebar:#020b26;
+$color-primary:#12151C;
+$color-white:#c4c4c4;
+$color-purple:#9a29f5;
+$color-sidebar:#1D202B;
+$color-scroll:#5c5c5c;
 $color-orange:#d03026;
 $color-yellow:#9d7e1d;
 $color-blue-light:#08b3e5;
-$color-bg-title:#1e2747;
+$color-bg-title:#21252f;
 $color-sidebar-title:#6c92cc;
+$color-bg-footer:#2e2d3b;
+$color-star : #ffd900;
 
-$gradient-brand:-webkit-linear-gradient(#17459c, $color-blue-light);
+$gradient-brand:-webkit-linear-gradient(90deg, rgba(178,67,247,1) 0%, rgba(123,60,227,1) 100%);
+$gradient-carousel : linear-gradient(to bottom,transparent 0%,rgba(4,11,19,0.25) 89%,#1b073ec4  100%);
+

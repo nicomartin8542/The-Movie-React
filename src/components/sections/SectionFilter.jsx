@@ -1,17 +1,26 @@
-import React from 'react'
-import { CardMoviePoster } from '../cards/CardMoviePoster'
+import React,{useContext,useEffect} from 'react'
+import movieContext from '../context/movies/movieContext';
+import { Spinner } from '../layouts/Spinner';
+import { SectionMoviesFilter } from './SectionMoviesFilter';
+
 
 
 export const SectionFilter = ({titulo}) => {
+  const movieCont = useContext(movieContext);
+  const {getMoviesPopular,moviesPopular,spinner} = movieCont;
+
+  useEffect(() => {
+    getMoviesPopular();
+
+  }, [])
   return (
     <div className='section__movies-filter-container'>
-      <h2 className='sidebar-title'>{titulo}</h2>
-      <div className="section__movies-filter">
-        <CardMoviePoster pills={false}/>
-        <CardMoviePoster pills={false}/>
-        <CardMoviePoster pills={false}/>
-        <CardMoviePoster pills={false}/>
-      </div>
+      {
+        (spinner)
+          ? <Spinner/>
+          : <SectionMoviesFilter titulo={titulo} movies={moviesPopular}/>
+      }
+
     </div>
   )
 }

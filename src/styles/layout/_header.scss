@@ -5,15 +5,16 @@ header{
   right: 0;
   left: 0;
   height:80px;
-  background-color: $color-sidebar;
+  background-color: transparent;
   opacity: .97;
   z-index:10;
+
   @include d-flex(row);
   justify-content: space-between;
   align-items: center;
-  @include responsive(desktop){
+  @include responsive(desktopxl){
     border-bottom: 0;
-
+    padding: 0 8rem;
   }
 }
 .header__logo{
@@ -21,17 +22,15 @@ header{
   padding-left:1.5rem ;
   display: flex ;
   align-items: center;
-  h1{
-    margin: 0 10px;
-    font-size: 3rem;
-    text-transform: uppercase;
-    @extend %gradient-text-blue;
-    i{
-      font-size: 2.9rem;
-      padding: .3rem 1.2rem;
-      margin-bottom: .8rem;
-      vertical-align: middle;
-    }
+h5{
+  span{
+    font-size: 5rem;
+    color:$color-purple;
   }
+}
+}
 
+.is-sticky {
+  background-color: $color-primary;
+  transition: .2s ease-in-out;
 }

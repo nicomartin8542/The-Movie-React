@@ -7,8 +7,15 @@
     }
   }
 
-  @if $breakpoint==desktop {
+  @if $breakpoint==desktopx {
     @media only screen and (min-width: $size-xl) {
+      @content;
+    }
+  }
+
+
+  @if $breakpoint==desktop {
+    @media only screen and (min-width: $size-lg) {
       @content;
     }
   }
@@ -20,7 +27,7 @@
   }
 
   @if $breakpoint==mobile {
-    @media only screen and (min-width: $size-sm) {
+    @media only screen and (min-width: 320px) {
       @content;
     }
   }
@@ -36,9 +43,7 @@
 
 
 @mixin heigth-carousel(){
-  @include responsive(mobile){
-    height: 450px;
-  }
+  height: 450px;
   @include responsive(tablet){
     height: 500px;
   }
@@ -48,4 +53,43 @@
   @include responsive(desktopxl){
     height: 600px;
   }
+}
+
+
+
+@mixin font-size-heading () {
+  @for $i from 1 through 6 {
+    h#{$i} {
+      font-size: $base-font-size + $heading-scale * (6 - $i);
+      @include responsive(tablet){
+        font-size: $base-font-size + 10 * (6 - $i);;
+      }
+      @include responsive(desktop){
+        font-size: $base-font-size + 12 * (6 - $i);;
+      }
+
+      @include responsive(desktopx){
+        font-size: $base-font-size + 14 * (6 - $i);;
+      }
+    }
+  }
+}
+
+@mixin carousel-info () {
+  $base-font-size : .8rem;
+  $heading-scale: 0.8;
+  font-size: $base-font-size + $heading-scale ;
+  @include responsive(tablet){
+    $heading-scale: 1;
+    font-size: $base-font-size + $heading-scale ;
+  }
+  @include responsive(desktop){
+    $heading-scale: 1.2;
+    font-size: $base-font-size + $heading-scale ;
+  }
+  @include responsive(desktopx){
+    $heading-scale: 1.4;
+    font-size: $base-font-size + $heading-scale ;
+  }
+
 }

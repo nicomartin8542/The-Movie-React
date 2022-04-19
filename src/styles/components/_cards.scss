@@ -2,6 +2,7 @@
 .card__movie{
   border-radius: 8px;
   width: 100%;
+  cursor: pointer;
   @include d-flex(col);
   position: relative;
   &-body{
@@ -34,7 +35,7 @@
       p{
         font-size: 1.2rem;
         i{
-          color:#ffd900;
+          color:$color-star;
           padding-right: 4px;
         }
       }
